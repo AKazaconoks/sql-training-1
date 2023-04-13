@@ -1,27 +1,31 @@
 export const selectCount = (table: string): string => {
-  return `SELECT COUNT(*) AS c FROM ${table}`;
+  return `select count() as c from ${table}`;
 };
 
 export const selectRowById = (id: number, table: string): string => {
-  return `SELECT * FROM ${table} WHERE id = ${id}`;
+  return `select * from ${table} where id = ${id}`;
 };
 
 export const selectCategoryByTitle = (title: string): string => {
-  return `SELECT * FROM categories WHERE title = "${title}"`;
+  return `select * from categories where title = '${title}'`;
 };
 
 export const selectAppCategoriesByAppId = (appId: number): string => {
-  return `SELECT * FROM apps_categories WHERE app_id = ${appId}`;
+  return `select categories.title as category_title, category_id, apps.title as app_title
+  from apps_categories
+  join apps on apps.id = app_id
+  join categories on categories.id = category_id
+  where app_id = ${appId}`;
 };
 
 export const selectUnigueRowCount = (tableName: string, columnName: string): string => {
-  return `SELECT count(distinct ${columnName}) from ${tableName}`;
+  return `select count(distinct ${columnName}) as c from '${tableName}'`;
 };
 
 export const selectReviewByAppIdAuthor = (appId: number, author: string): string => {
-  return `SELECT `;
+  return `select * from reviews where app_id = ${appId} and author = '${author}'`;
 };
 
 export const selectColumnFromTable = (columnName: string, tableName: string): string => {
-  return `SELECT `;
+  return `select ${columnName} from '${tableName}'`;
 };

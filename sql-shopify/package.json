@@ -13,7 +13,6 @@
     "test-04": "npm run test-pattern 04-*",
     "test-05": "npm run test-pattern 05-*",
     "test-06": "npm run test-pattern 06-*",
-    "tests": "jest",
     "prettier": "prettier --write './{src,test}/**/*.ts'"
   },
   "author": "RudolfsLogins",
