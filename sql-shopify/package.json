@@ -13,6 +13,7 @@
     "test-04": "npm run test-pattern 04-*",
     "test-05": "npm run test-pattern 05-*",
     "test-06": "npm run test-pattern 06-*",
+    "tests": "jest",
     "prettier": "prettier --write './{src,test}/**/*.ts'"
   },
   "author": "RudolfsLogins",
@@ -29,7 +30,7 @@
     "lodash": "^4.17.15",
     "moment": "^2.24.0",
     "prettier": "^1.18.2",
-    "sqlite3": "^4.1.0",
+    "sqlite3": "^5.0.2",
     "ts-jest": "^24.1.0",
     "tslint": "^5.20.0",
     "typescript": "^3.6.3"
